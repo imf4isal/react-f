@@ -1,6 +1,4 @@
-
 import React, {useState, useEffect} from "react";
-
 const AuthContext = React.createContext({
   isLoggedIn: false,
 });
@@ -10,7 +8,6 @@ export const AuthContextProvider = props => {
 
   useEffect(() => {
     const storedUserLoggedInInformation = localStorage.getItem("isLoggedIn");
-
     if (storedUserLoggedInInformation === "1") {
       setIsLoggedIn(true);
     }
